@@ -1,9 +1,13 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
-import Canvas from "./canvas";
 
 export function CanvasWrapper() {
+  const Canvas = dynamic(() => import("../components/canvas"), {
+    ssr: false,
+  });
+
   const [dimensions, setDimensions] = useState<{
     height: number;
     width: number;

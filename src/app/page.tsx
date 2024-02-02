@@ -9,10 +9,6 @@ import { CanvasWrapper } from "@/components/canvasWrapper";
 import { Prompt } from "@/components/prompt";
 
 export default function Home() {
-  const Canvas = dynamic(() => import("../components/canvas"), {
-    ssr: false,
-  });
-
   return (
     <main>
       <div className="flex h-screen">
